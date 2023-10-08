@@ -1,0 +1,52 @@
+{
+    "name": "lunar-extend/lunar-extend",
+    "description": "Lunar Extend Monorepo",
+    "license": "MIT",
+    "authors": [
+        {
+            "name": "Lunar-extend"
+        },
+        {
+            "name": "Rafal Morawiec",
+            "email": "rafal.morawiec@fibloo.com"
+        }
+    ],
+    "require": {
+        "ext-bcmath": "*",
+        "ext-exif": "*",
+        "ext-intl": "*",
+        "lunarphp/lunar": "^0.6.0",
+        "php": "^8.1"
+    },
+    "require-dev": {
+        "laravel/pint": "1.13.1",
+        "mockery/mockery": "^1.4.4",
+        "nunomaduro/larastan": "^2.0",
+        "orchestra/testbench": "^7.0|^8.0",
+        "phpunit/phpunit": "^9.5",
+        "symplify/monorepo-builder": "^11.2"
+    },
+    "autoload": {
+        "psr-4": {
+            "LunarExtend\\Sitemap\\": "packages/sitemap/src",
+            "LunarExtend\\Stub\\": "packages/stub/src"
+        }
+    },
+    "extra": {
+        "laravel": {
+            "providers": [
+                "LunarExtend\\Sitemap\\SitemapServiceProvider",
+                "LunarExtend\\Stub\\StubServiceProvider"
+            ]
+        },
+        "lunar": {
+            "name": "Bunch of extensions for Lunar storefront and hub"
+        }
+    },
+    "replace": {
+        "lunar-extend/sitemap": "0.1.0",
+        "lunar-extend/stub": "0.1.0"
+    },
+    "minimum-stability": "dev",
+    "prefer-stable": true
+}
